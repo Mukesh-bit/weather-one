@@ -82,8 +82,8 @@
 /* FOR TABLETS SCREEN */
 @media only screen and (min-width:768px) and (max-width: 991px){
   .weather-app {
-    width: 10%;
-    height: 40vh;
+    width: 70%;
+    height: 60vh;
     padding-inline: 10px;
   }
 }

@@ -3,11 +3,13 @@ import axios from "axios"; // Import axios for making HTTP requests to APIs
 
 const weatherApp = () => {
   const [city, setCity] = useState(""); // State to store the city name input by the user
-  const [weather, setWeather] = useState(null); // State to store the weather data retrieved from API
+  const [weather, setWeather] = useState(); // State to store the weather data retrieved from API
   const [error, setError] = useState(null); // State to store any error messages
+  const [cityName, setCityName] = useState(city)
+ 
+console.log(cityName)
 
-
-  const OPENCAGE_API_KEY = "a059bf750aba4615a53761bdde4177d7"; // OpenCage API key
+  const OPENCAGE_API_KEY = "a059bf750aba4615a53761bdde4177d7"// OpenCage API key
 
   // Function to get latitude and longitude of the city using OpenCage API
   const getCoordinates = async (city) => {
@@ -38,11 +40,13 @@ const weatherApp = () => {
   const handleSearch = async () => {
     setError(null); // Reset error state
     setWeather(null); // Reset weather data
+    setCityName(city)
 
     const coordinates = await getCoordinates(city); // Get coordinates from city name
     if (coordinates) {
       await getWeather(coordinates.lat, coordinates.lng); // Fetch weather data for those coordinates
     }
+
   };
 
   return (
@@ -66,7 +70,7 @@ const weatherApp = () => {
 
         {weather && (
           <div style={{ marginTop: "20px" }}>
-            <h2 style={{ color: "white" }}>{city}</h2>
+            <h2 style={{ color: "white" }}>{cityName}</h2>
             <p
               style={{
                 fontSize: "2rem",
