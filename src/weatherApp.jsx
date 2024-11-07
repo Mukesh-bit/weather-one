@@ -7,7 +7,6 @@ const weatherApp = () => {
   const [error, setError] = useState(null); // State to store any error messages
   const [cityName, setCityName] = useState(city)
  
-console.log(cityName)
 
   const OPENCAGE_API_KEY = "a059bf750aba4615a53761bdde4177d7"// OpenCage API key
 
