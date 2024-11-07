@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-app {
+  background-color: #0B121E;
+  width: 30%;
+  height: 60vh;
+  border-radius: 5px;
+
+}
+
+.input {
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #1F2C3C;
+  color: white;
+}
+
+.btn {
+  padding: 10px;
+  margin-block: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  align-items: center;
+  place-items: center;
+  margin-top: 30px;
+}
+
+.weather-details p {
+  color: white;
+  height: 60px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #202B3C;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-left: 15px;
+  text-align: left;
+}
+
+
+/* RESPONSIVE */
+
+/* FOR MOBILE SCREEN */
+@media only screen and (max-width:767px){
+  .weather-app {
+    width: 90%;
+    height: 50vh;
+    padding-inline: 10px;
+  }
+}
+
+/* FOR TABLETS SCREEN */
+@media only screen and (min-width:768px) and (max-width: 991px){
+  .weather-app {
+    width: 10%;
+    height: 40vh;
+    padding-inline: 10px;
+  }
+}
+
+/* FOR TABLETS SCREEN */
+@media only screen and (min-width:992px) and (max-width: 1199px){
+  .weather-app {
+    width: 80%;
+    height: 60vh;
+    padding-inline: 10px;
+  }
+}
